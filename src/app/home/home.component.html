@@ -1,7 +1,7 @@
 <div class="bg-white py-12 lg:py-24">
-  <div class="container px-4 md:px-6">
+  <div class="w-full px-4 md:px-6">
     <div
-      class="grid max-w-5xl items-center gap-4 mx-auto lg:grid-cols-2 lg:gap-10"
+      class="mx-auto grid max-w-7xl items-center gap-4 lg:grid-cols-2 lg:gap-20"
     >
       <div class="space-y-4 text-center lg:space-y-6 lg:text-left">
         <h1 class="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl">
@@ -26,44 +26,41 @@
         </p>
       </div>
       <div
-        class="mx-auto grid gap-4 max-w-[400px] aspect-[4/3] rounded-xl overflow-hidden items-start lg:order-last lg:max-w-none lg:aspect-auto"
+        class="mx-auto grid items-start gap-4 overflow-hidden rounded-xl lg:order-last lg:max-w-none"
       >
         <img
           alt="Seventeen"
           class="object-cover object-center"
-          height="300"
-          src="/placeholder.svg"
-          width="400"
+          height="720"
+          ngSrc="assets/images/seventeen-follow-tour-getty.jpg"
+          width="1080"
         />
       </div>
     </div>
     <div
-      class="mx-auto max-w-4xl grid items-center gap-4 lg:grid-cols-3 lg:gap-6 xl:max-w-5xl"
+      class="mx-auto mt-20 grid max-w-4xl items-center gap-4 lg:grid-cols-3 lg:gap-6 xl:max-w-5xl"
     >
-      <div
-        class="mx-auto grid gap-1 text-center lg:col-start-2 lg:text-left lg:gap-2"
+      <a
+        class="mx-auto grid gap-1 text-center lg:col-start-1 lg:gap-2 lg:text-left"
+        href="https://www.ticketmaster.com/seventeen-tickets/artist/2281371"
       >
-        <h3 class="text-2xl font-bold">Members</h3>
-        <p class="text-gray-500 dark:text-gray-400">
-          Click on a member to learn more
-        </p>
-      </div>
-      <div
-        class="mx-auto grid gap-1 text-center lg:col-start-3 lg:text-left lg:gap-2"
+        <h3 class="text-2xl font-bold hover:text-gray-600">Tour</h3>
+        <p class="text-gray-500">See their upcoming tour dates</p>
+      </a>
+      <a
+        class="mx-auto grid gap-1 text-center lg:col-start-2 lg:gap-2 lg:text-left"
+        routerLink="/members"
       >
-        <h3 class="text-2xl font-bold">Music</h3>
-        <p class="text-gray-500 dark:text-gray-400">
-          Listen to their latest hits
-        </p>
-      </div>
-      <div
-        class="mx-auto grid gap-1 text-center lg:col-start-1 lg:text-left lg:gap-2"
+        <h3 class="text-2xl font-bold hover:text-gray-600">Members</h3>
+        <p class="text-gray-500">Click on a member to learn more</p>
+      </a>
+      <a
+        class="mx-auto grid gap-1 text-center lg:col-start-3 lg:gap-2 lg:text-left"
+        routerLink="/music"
       >
-        <h3 class="text-2xl font-bold">Tour</h3>
-        <p class="text-gray-500 dark:text-gray-400">
-          See their upcoming tour dates
-        </p>
-      </div>
+        <h3 class="text-2xl font-bold hover:text-gray-600">Music</h3>
+        <p class="text-gray-500">Listen to their latest hits</p>
+      </a>
     </div>
   </div>
 </div>

@@ -1,13 +1,13 @@
 <nav class="bg-gray-800 p-4">
-  <div class="container mx-auto flex justify-between items-center">
+  <div class="container mx-auto flex items-center justify-between">
     <a
       routerLink="/"
-      class="text-white text-2xl font-bold flex items-center gap-2"
+      class="flex items-center gap-2 text-2xl font-bold text-white"
     >
       <img
         ngSrc="assets/images/svt-logo.jpg"
         alt="Logo"
-        class="inline-block mr-2 rounded-full"
+        class="mr-2 inline-block rounded-full"
         height="48"
         width="48"
         priority
@@ -22,7 +22,7 @@
     >
       <svg
         id="menu-open-icon"
-        class="fill-white h-6 w-6"
+        class="h-6 w-6 fill-white"
         viewBox="0 0 1024 1024"
         xmlns="http://www.w3.org/2000/svg"
       >
@@ -48,26 +48,26 @@
     </button>
     <div
       id="menu"
-      class="hidden md:static md:flex md:flex-row flex-col items-center absolute bg-gray-800 md:w-auto w-full md:top-0 top-20 left-0"
+      class="absolute left-0 top-20 hidden w-full flex-col items-center bg-gray-800 md:static md:top-0 md:flex md:w-auto md:flex-row"
     >
       <a
         routerLink="/members"
         routerLinkActive="text-white"
-        class="text-gray-300 hover:text-white px-4 py-2"
+        class="px-4 py-2 text-gray-300 hover:text-white"
         id="link-1"
         >Members</a
       >
       <a
         routerLink="/quiz"
         routerLinkActive="text-white"
-        class="text-gray-300 hover:text-white px-4 py-2"
+        class="px-4 py-2 text-gray-300 hover:text-white"
         id="link-2"
         >Quiz</a
       >
       <a
         routerLink="/contact"
         routerLinkActive="text-white"
-        class="text-gray-300 hover:text-white px-4 py-2"
+        class="px-4 py-2 text-gray-300 hover:text-white"
         id="link-3"
         >Data</a
       >
@@ -75,6 +75,6 @@
   </div>
 </nav>
 <router-outlet></router-outlet>
-<footer class="bg-gray-800 text-white text-center py-4">
-  <p>&copy; 2021 Seventeen</p>
+<footer class="bg-gray-800 py-4 text-center text-white">
+  <p>&copy; 2024 Seventeen</p>
 </footer>
