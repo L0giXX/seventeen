@@ -9,8 +9,8 @@ import { IAlbum, IToken } from '../types/music.interface';
 export class MusicService {
   constructor(private http: HttpClient) {}
 
-  private clientId = 'fc4e158e39af4404b95585fbdbe3984b';
-  private clientSecret = 'b9fafa7c3df34a17987438b58a10092b';
+  private clientId = '123';
+  private clientSecret = '123';
 
   getAccessToken(): Observable<IToken> {
     const params = new HttpParams()
