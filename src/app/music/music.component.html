@@ -1,1 +1,44 @@
-<p>music works!</p>
+<div class="w-full bg-white">
+  <main
+    class="mx-auto flex max-w-7xl flex-col gap-6 px-4 py-6 md:gap-8 lg:gap-12"
+  >
+    <div class="flex flex-col gap-2">
+      <h2 class="text-center text-3xl font-bold tracking-tighter sm:text-left">
+        Discography
+      </h2>
+      <p class="text-center text-gray-500 sm:text-left dark:text-gray-400">
+        Albums
+      </p>
+    </div>
+    <div
+      class="grid grid-cols-1 items-start gap-4 sm:grid-cols-2 sm:gap-6 md:grid-cols-3 md:gap-8 lg:grid-cols-4 lg:gap-12"
+    >
+      <div
+        class="flex flex-col items-center gap-1 md:items-start"
+        *ngFor="let album of albums"
+      >
+        <img
+          alt="{{ album.name }}"
+          class="rounded-lg object-contain object-center"
+          height="400"
+          src="{{ album.images[0].url }}"
+          width="400"
+        />
+        <h3
+          class="text-center text-xl font-semibold tracking-tighter md:text-left"
+        >
+          {{ album.name }}
+        </h3>
+        <p class="text-center text-sm text-gray-500 md:text-left">
+          {{ album.release_date }}
+        </p>
+        <a
+          class="inline-flex items-center text-center text-sm underline hover:text-gray-900 md:text-left"
+          href="{{ album.external_urls.spotify }}"
+        >
+          Listen on Spotify
+        </a>
+      </div>
+    </div>
+  </main>
+</div>

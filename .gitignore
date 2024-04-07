@@ -2,6 +2,8 @@
 
 # Environment
 /environments
+environment.ts
+environment.development.ts
 
 # Compiled output
 /dist

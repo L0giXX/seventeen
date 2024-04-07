@@ -1,7 +1,8 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { IAlbum, IToken } from '../types/music.interface';
+import { environment } from '../../../environments/environment.development';
 
 @Injectable({
   providedIn: 'root',
@@ -9,8 +10,8 @@ import { IAlbum, IToken } from '../types/music.interface';
 export class MusicService {
   constructor(private http: HttpClient) {}
 
-  private clientId = '123';
-  private clientSecret = '123';
+  private clientId = environment.clientId;
+  private clientSecret = environment.clientSecret;
 
   getAccessToken(): Observable<IToken> {
     const params = new HttpParams()
@@ -38,11 +39,13 @@ export class MusicService {
       `Bearer ${access_token}`,
     );
 
-    return this.http.get<IAlbum[]>(
-      `https://api.spotify.com/v1/artists/${id}/albums`,
-      {
-        headers,
-      },
-    );
+    return this.http
+      .get<IAlbum[]>(
+        `https://api.spotify.com/v1/artists/${id}/albums?include_groups=album&market=SK&limit=50`,
+        {
+          headers,
+        },
+      )
+      .pipe(map((data: any) => data.items));
   }
 }
